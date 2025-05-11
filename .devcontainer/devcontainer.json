@@ -1,0 +1,23 @@
+{
+  "name": "ubuntu-ml-dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder}/model,target=/workspace/model,type=bind"
+  ],
+  "postCreateCommand": "echo 'Dev container ready!'"
+}
+
