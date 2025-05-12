@@ -12,7 +12,7 @@ RUN apt-get update && \
 RUN ln -sf python3 /usr/bin/python
 
 # Install Python packages
-COPY ../api/requirements.txt /tmp/requirements.txt
+COPY api/requirements.txt /tmp/requirements.txt
 RUN pip install --upgrade pip && pip install -r /tmp/requirements.txt
 
 WORKDIR /workspace
