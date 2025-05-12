@@ -26,5 +26,5 @@ jobs:
       with:
         context: ./api
         push: true
-        tags: automlops/readmission-api:latest
+        tags: sahithaitha02/automlops/readmission-api:latest
 
