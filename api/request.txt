@@ -1,0 +1,36 @@
+curl -X 'POST' \
+  'http://localhost:8000/predict' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "mean_radius": 14.5,
+  "mean_texture": 20.1,
+  "mean_perimeter": 100.3,
+  "mean_area": 800.2,
+  "mean_smoothness": 0.1,
+  "mean_compactness": 0.15,
+  "mean_concavity": 0.2,
+  "mean_concave_points": 0.1,
+  "mean_symmetry": 0.2,
+  "mean_fractal_dimension": 0.06,
+  "radius_error": 0.4,
+  "texture_error": 1.0,
+  "perimeter_error": 1.5,
+  "area_error": 30.2,
+  "smoothness_error": 0.005,
+  "compactness_error": 0.02,
+  "concavity_error": 0.03,
+  "concave_points_error": 0.01,
+  "symmetry_error": 0.02,
+  "fractal_dimension_error": 0.003,
+  "worst_radius": 18.5,
+  "worst_texture": 26.3,
+  "worst_perimeter": 120.4,
+  "worst_area": 1000.6,
+  "worst_smoothness": 0.15,
+  "worst_compactness": 0.25,
+  "worst_concavity": 0.3,
+  "worst_concave_points": 0.15,
+  "worst_symmetry": 0.25,
+  "worst_fractal_dimension": 0.07
+}'
