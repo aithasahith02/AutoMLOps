@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: readmission-api
+  labels:
+    app: readmission-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: readmission-api
+  template:
+    metadata:
+      labels:
+        app: readmission-api
+    spec:
+      containers:
+      - name: readmission-api
+        image: sahithaitha02/automlops-readmission-api:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+
